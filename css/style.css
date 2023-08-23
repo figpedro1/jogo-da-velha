@@ -1,0 +1,19 @@
+table {
+    font-size: 50pt;
+    display: inline;
+}
+
+tr {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+td {
+    width: 166px;
+    height: 166px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+}
