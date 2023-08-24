@@ -1,3 +1,9 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 table {
     font-size: 50pt;
     display: inline;
@@ -16,4 +22,16 @@ td {
     align-items: center;
     justify-content: space-around;
     border: 1px solid black;
+}
+
+#info {
+    display: block;
+}
+
+#subInfo {
+    display: block;
+}
+
+#info {
+    display: block;
 }
