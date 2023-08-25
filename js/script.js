@@ -40,10 +40,10 @@ function jogada(linha, coluna){
         
         if(posicaoStatus[linha][coluna] == 0){
             posicaoStatus[linha][coluna] = vezDe;
-            posicao[linha][coluna].innerHTML = vezDe == 1 ? '<img class="xo" src="imagens/x.png">' : '<img class="xo" src="imagens/circulo.png">'
+            posicao[linha][coluna].innerHTML = vezDe == 1 ? '<img class="xo" src="img/x.png">' : '<img class="xo" src="img/circulo.png">'
             turno++
             vencedor = vitoria()
-            info.innerHTML = finalizado ? (vencedor == -1 ? "Deu velha!" : (vencedor == 1 ? '<img class="vezDe" src="imagens/x.png">' : '<img class="vezDe" src="imagens/circulo.png">') + " venceu!") : "Vez de: " + (vezDe == 2 ? '<img class="vezDe" src="imagens/x.png">' : '<img class="vezDe" src="imagens/circulo.png">');
+            info.innerHTML = finalizado ? (vencedor == -1 ? "Deu velha!" : (vencedor == 1 ? '<img class="vezDe" src="img/x.png">' : '<img class="vezDe" src="img/circulo.png">') + " venceu!") : "Vez de: " + (vezDe == 2 ? '<img class="vezDe" src="img/x.png">' : '<img class="vezDe" src="img/circulo.png">');
             subInfo.innerHTML = finalizado ? "Clique em reiniciar para jogar novamente!" : "";
         } else {
             subInfo.innerHTML = "Posição já jogada!";
@@ -58,7 +58,7 @@ for (let linha = 0; linha < posicao.length; linha++){
 };
 
 reiniciar.addEventListener('click', () => {
-    info.innerHTML = 'Vez de: <img class="vezDe" src="imagens/x.png">'
+    info.innerHTML = 'Vez de: <img class="vezDe" src="img/x.png">'
     subInfo.innerHTML = ""
     turno = 0;
     finalizado = false;
