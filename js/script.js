@@ -35,16 +35,16 @@ function vitoria() {
 };
 
 function jogada(linha, coluna){
-    subInfo.innerHTML = " ";
     if(!finalizado){
         const vezDe = (turno % 2) + 1
         
         if(posicaoStatus[linha][coluna] == 0){
             posicaoStatus[linha][coluna] = vezDe;
-            posicao[linha][coluna].innerHTML = vezDe == 1 ? "X" : "O"
+            posicao[linha][coluna].innerHTML = vezDe == 1 ? '<img class="xo" src="imagens/x.png">' : '<img class="xo" src="imagens/circulo.png">'
             turno++
             vencedor = vitoria()
-            info.innerHTML = finalizado ? (vencedor == -1 ? "Deu velha!" : (vencedor == 1 ? "X" : "O") + " venceu!") + " Clique em reiniciar para jogar novamente!" : (vezDe == 2 ? "Vez de: X" : "Vez de: O");
+            info.innerHTML = finalizado ? (vencedor == -1 ? "Deu velha!" : (vencedor == 1 ? '<img class="vezDe" src="imagens/x.png">' : '<img class="vezDe" src="imagens/circulo.png">') + " venceu!") : "Vez de: " + (vezDe == 2 ? '<img class="vezDe" src="imagens/x.png">' : '<img class="vezDe" src="imagens/circulo.png">');
+            subInfo.innerHTML = finalizado ? "Clique em reiniciar para jogar novamente!" : "";
         } else {
             subInfo.innerHTML = "Posição já jogada!";
         };
@@ -58,13 +58,14 @@ for (let linha = 0; linha < posicao.length; linha++){
 };
 
 reiniciar.addEventListener('click', () => {
-    info.innerHTML = "Vez de: " + (vencedor < 2 ? "X" : "O");
+    info.innerHTML = 'Vez de: <img class="vezDe" src="imagens/x.png">'
+    subInfo.innerHTML = ""
     turno = 0;
     finalizado = false;
     for (let linha = 0; linha < posicaoStatus.length; linha++){
         for (let coluna = 0; coluna < posicaoStatus[linha].length; coluna++){
             posicaoStatus[linha][coluna] = 0
-            posicao[linha][coluna].innerHTML = " "
+            posicao[linha][coluna].innerHTML = ""
         }
     }
 });

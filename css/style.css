@@ -1,12 +1,30 @@
 body {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #e83f68;
+    color: #e83f68;
 }
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+    min-height: 40px;
+    display: block;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+    min-height: 30px;
+}
+
 
 table {
     font-size: 50pt;
-    display: inline;
+    display: block;
+    padding: 0;
 }
 
 tr {
@@ -15,13 +33,57 @@ tr {
     align-items: center;
 }
 
+tr:nth-child(even) {
+    border-top: 25px solid #e83f68;
+    border-bottom: 25px solid #e83f68;
+}
+
 td {
     width: 166px;
     height: 166px;
-    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: all;
+    user-select: none;
+    display: flex;
+}
+
+td:nth-child(even) {
+    border-left: 25px solid #e83f68;
+    border-right: 25px solid #e83f68;
+}
+
+.container {
+    padding: 40px;
+    height: 100%;
+    width: 45%;
+    border: 3px solid #ccc;
+    display: flex;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid black;
+    flex-direction: column;
+    border-radius: 50px;
+    background-color: #ffffffd0;
+}
+
+.xo {
+    height: 80%;
+    pointer-events: none;
+}
+
+.vezDe{
+    position: relative;
+    top: 5px;
+    height: 30px;
+    pointer-events: none;
+}
+
+.buttonContainer {
+    min-width: 170px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #info {
@@ -34,4 +96,21 @@ td {
 
 #info {
     display: block;
+}
+
+#reiniciar {
+    height: 70px;
+    width: 170px;
+    border-radius: 35px;
+    background-color: #e83f68;
+    color: #ffffff;
+    border: 2px solid #ccc;
+    font-size: 20px;
+}
+
+#topo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 498px;
 }

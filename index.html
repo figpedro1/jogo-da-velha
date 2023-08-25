@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="imagens/icone.png">
+    <title>Jogo da velha</title>
 </head>
 <body>
-    <div>
-        <h1 id="info">Vez de: X</h1>
-        <h2 id="subInfo">fsadfasdfg</h2>
+    <div id></div>
+    <div class="container">
+        <div id="topo">
+            <div id="infos">
+                    <h1 id="info">Vez de: <img class="vezDe" src="imagens/x.png"></h1>
+                <p id="subInfo"></p>
+            </div>
+            <div class="buttonContainer"><button id="reiniciar"><strong>Reiniciar</strong></button></div>
+        </div>
+
         <table>
             <tr>
                 <td id="aa"></td>
@@ -27,9 +35,8 @@
                 <td id="cc"></td>
             </tr>
         </table>
-        
-        <button id="reiniciar">reiniciar</button>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/animacoes.js"></script>
 </body>
 </html>
