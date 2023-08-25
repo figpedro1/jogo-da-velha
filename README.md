@@ -22,4 +22,4 @@ Um simples jogo da velha implementado em HTML, CSS e JavaScript.
 
 ## Autor
 
-Pedro Figueiredo
+Desenvolvido por Pedro Figueiredo
